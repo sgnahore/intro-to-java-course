@@ -36,8 +36,8 @@ public class CollectionsExercises {
         //  - print the last element of the stack on the screen
         System.out.print(stacks.lastElement());
         //  - invoke the method pop() on the stack and print the result on the screen
-        int poppedElement = stacks.pop();
-        System.out.print(poppedElement);
+        // int poppedElement = stacks.pop();
+        System.out.print(stacks.pop());
         //  - invoke the push(4) method on the stack
         stacks.push(4);
         //  - return the stack
@@ -86,7 +86,11 @@ public class CollectionsExercises {
         // Return the keys and then the values associated 
         return (HashMap<Integer, String>) languages;
         //  - determine the set of keys from the map and print it on the screen
+
+        
+
         //  - determine the set of values from the map and print it on the screen
+
         //  - determine whether the map contains "English" as a language and print the result on the screen
 
         // System.out.print(languages.containsValue("English"));
