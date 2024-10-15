@@ -2,6 +2,7 @@ package com.cbfacademy;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -39,14 +40,14 @@ public class CollectionsAssignment {
     
     // If the size of the set is smaller than the original collection,
     // that means there were duplicates in the collection.
-    Set<Integer> uniqueIntegers = new HashSet<>(integers);
+        Set<Integer> uniqueIntegers = new HashSet<>(integers);
 
-    if (uniqueIntegers.size() != integers.size()){
-    return true;
-    }else{
-    return false;
+        if (uniqueIntegers.size() != integers.size()){
+            return true;
+        } else {
+            return false;
 
-}
+        }
     }
 
     /**
@@ -65,8 +66,15 @@ public class CollectionsAssignment {
      * collection.
      */
     public static ArrayList<Integer> inEither(Collection<Integer> ints1, Collection<Integer> ints2) {
-        // This must be done with no loops.
-        return new ArrayList<Integer>();
+        Set<Integer> setOfInts = new HashSet<>();
+        setOfInts.addAll(ints1);
+        setOfInts.addAll(ints2);
+
+        ArrayList<Integer> noDuplicates = new ArrayList<>(setOfInts);
+
+        Collections.sort(noDuplicates);
+
+        return noDuplicates;
     }
 
     /**
