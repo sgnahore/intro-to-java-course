@@ -15,6 +15,13 @@ public class CollectionsAssignment {
      * @param minValue the minimum value to retain
      */
     public static void removeSmallInts(List<Integer> list, int minValue) {
+       for(int i = list.size() - 1; i >=0; i--){
+        if (list.get(i) < minValue){
+            list.remove(i);
+        }
+
+       }
+       
         // Your solution must traverse the list from last to first element
         // removing any values less than minValue.
     }
