@@ -92,7 +92,15 @@ public class CollectionsAssignment {
      */
     public static ArrayList<Integer> inBoth(Collection<Integer> ints1, Collection<Integer> ints2) {
         // This must be done with no loops.
-        return new ArrayList<>();
+
+        Set<Integer> setOfInts1 = new HashSet<>(ints1);
+
+        Set<Integer> setOfInts2 = new HashSet<>(ints2);
+        setOfInts1.retainAll(setOfInts2);
+
+        ArrayList<Integer> duplicates = new ArrayList<>(setOfInts1);
+
+        return duplicates;
     }
 
     /**
