@@ -2,7 +2,9 @@ package com.cbfacademy;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CollectionsAssignment {
 
@@ -34,8 +36,17 @@ public class CollectionsAssignment {
      * @return true if integers contains duplicates, false otherwise
      */
     public static boolean containsDuplicates(Collection<Integer> integers) {
-        // Your solution must not use any loops.
-        return false;
+    
+    // If the size of the set is smaller than the original collection,
+    // that means there were duplicates in the collection.
+    Set<Integer> uniqueIntegers = new HashSet<>(integers);
+
+    if (uniqueIntegers.size() != integers.size()){
+    return true;
+    }else{
+    return false;
+
+}
     }
 
     /**
